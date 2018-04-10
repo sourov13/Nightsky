@@ -1,0 +1,498 @@
+
+.moon{
+    height: 200px;
+    width: 200px;
+    border-bottom: 2px solid white;
+    border-radius: 50%;
+    transform: rotate(300deg);
+}
+/*body {*/
+    /*background: #ccc;*/
+/*}*/
+/*Lets start with the cloud formation rather*/
+
+/*The container will also serve as the SKY*/
+
+*{ margin: 0; padding: 0;}
+
+body {
+    /*To hide the horizontal scroller appearing during the animation*/
+    overflow: hidden;
+}
+#clouds{
+
+
+    padding: 100px 0;
+    background: black;
+    background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+
+}
+
+/*Time to finalise the cloud shape*/
+.cloud {
+    width: 200px; height: 60px;
+    background: #fff;
+
+    border-radius: 200px;
+
+    position: relative;
+}
+
+.cloud:before, .cloud:after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 100px; height: 80px;
+    position: absolute; top: -15px; left: 10px;
+
+    border-radius: 100px;
+
+    transform: rotate(30deg);
+}
+
+.cloud:after {
+    width: 120px; height: 120px;
+    top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+    animation: moveclouds 15s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+    left: 200px;
+    transform: scale(0.6);
+    opacity: 0.6; /*opacity proportional to the size*/
+
+    /*Speed will also be proportional to the size and opacity*/
+    /*More the speed. Less the time in 's' = seconds*/
+    animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+    left: -250px; top: -200px;
+
+    transform: scale(0.8);
+    opacity: 0.8; /*opacity proportional to the size*/
+
+    animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+    left: 470px; top: -250px;
+    transform: scale(0.75);
+    opacity: 0.75; /*opacity proportional to the size*/
+
+    animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+    left: -150px; top: -150px;
+    transform: scale(0.8);
+    opacity: 0.8; /*opacity proportional to the size*/
+
+    animation: moveclouds 20s linear infinite;
+}
+
+/*.stars{*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*height: 20px;*/
+    /*width: 20px;*/
+    /*border-radius: 50%;*/
+    /*background-color: #fff;*/
+    /*position: absolute;*/
+/*}*/
+
+.stars-1{
+    margin-left: 50px;
+    padding: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: blink;
+    animation-duration: 2.7s;
+    animation-iteration-count: infinite;
+}
+
+.stars-2{
+    margin-left: 100px;
+    margin-top: 500px;
+    padding: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: blink;
+    animation-duration: 2.4s;
+    animation-iteration-count: infinite
+}
+
+
+.stars-3{
+    margin-left: 200px;
+    margin-top: 400px;
+    padding: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: blink;
+    animation-duration: 4s;
+    animation-iteration-count: infinite
+}
+
+
+.stars-4{
+    margin-left: 80px;
+    margin-top: 200px;
+    padding: 0;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: blink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite
+}
+
+
+.stars-5{
+    margin-left: 60px;
+    margin-top: 400px;
+    padding: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: blink;
+    animation-duration: 3.2s;
+    animation-iteration-count: infinite
+}
+
+
+.stars-6{
+    margin-left: 800px;
+    margin-top: 420px;
+    padding: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: blink;
+    animation-duration: 2.9s;
+    animation-iteration-count: infinite
+}
+
+
+.stars-7{
+    margin-left: 800px;
+    margin-top: 180px;
+    padding: 0;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: blink;
+    animation-duration: 4s;
+    animation-iteration-count: infinite
+}
+
+
+.stars-8{
+    margin-right: 400px;
+    margin-top: 270px;
+    padding: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: blink;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite
+}
+
+
+.stars-9{
+    margin-left: 600px;
+    margin-top: 153px;
+    padding: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: blink;
+    animation-duration: 3.2s;
+    animation-iteration-count: infinite
+}
+
+
+.stars-10{
+    margin-left: 700px;
+    margin-top: 250px;
+    padding: 0;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite
+}
+
+
+.stars-11{
+    margin-left: 1100px;
+    margin-top: 350px;
+    padding: 0;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: blink;
+    animation-duration: 2.1s;
+    animation-iteration-count: infinite
+}
+
+
+.stars-12{
+    margin-left: 1000px;
+    margin-top: 39px;
+    padding: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: blink;
+    animation-duration: 2.9s;
+    animation-iteration-count: infinite
+}
+
+
+.stars-13{
+    margin-left: 689px;
+    margin-top: 31px;
+    padding: 0;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: blink;
+    animation-duration: 2.2s;
+    animation-iteration-count: infinite
+}
+
+
+.stars-14{
+    margin-left: 1000px;
+    margin-top: 550px;
+    padding: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: blink;
+    animation-duration: 1.9s;
+    animation-iteration-count: infinite
+}
+
+
+.stars-15{
+    margin-left: 400px;
+    margin-top: 72px;
+    padding: 0;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: blink;
+    animation-duration: 2.6s;
+    animation-iteration-count: infinite
+}
+
+.mini1{
+    margin-right: 400px;
+    margin-top: 72px;
+    padding: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation-name: shooting;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite
+}
+
+.mini2{
+    margin-right: 300px;
+    margin-top: 200px;
+    padding: 0;
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+}
+
+.mini4{
+    margin-left: 400px;
+    margin-top: 340px;
+    padding: 0;
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+}
+
+.mini5{
+    margin-left: 500px;
+    margin-top: 22px;
+    padding: 0;
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+}
+
+.mini6{
+    margin-left: 600px;
+    margin-top: 350px;
+    padding: 0;
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+}
+
+.mini7{
+    margin-left: 600px;
+    margin-top: 70px;
+    padding: 0;
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+}
+
+.mini8{
+    margin-left: 550px;
+    margin-top: 200px;
+    padding: 0;
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+}
+
+.mini9{
+    margin-left: 700px;
+    margin-top: 90px;
+    padding: 0;
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+}
+
+.mini10{
+    margin-left: 300px;
+    margin-top: 400px;
+    padding: 0;
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+}
+
+.mini11{
+    margin-left: 6000px;
+    margin-top: 50px;
+    padding: 0;
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+}
+
+.mini12{
+    margin-left: 300px;
+    margin-top: 500px;
+    padding: 0;
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+}
+
+.mini3{
+    margin-left: 500px;
+    margin-top: 450px;
+    padding: 0;
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+}
+
+
+@keyframes moveclouds {
+    0% {margin-left: 1000px;}
+    100% {margin-left: -1000px;}
+}
+@keyframes moveclouds {
+    0% {margin-left: 1000px;}
+    100% {margin-left: -1000px;}
+}
+@keyframes moveclouds {
+    0% {margin-left: 1000px;}
+    100% {margin-left: -1000px;}
+}
+
+@keyframes blink{
+    0% {background-color: white;}
+    50% {background-color: black;}
+    100% {background-color: white;}
+
+}
+
+@keyframes shooting {
+    0% {
+        top: 10%;
+        right: -50%;
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        right: 60%;
+        opacity: 0;
+    }
+}
